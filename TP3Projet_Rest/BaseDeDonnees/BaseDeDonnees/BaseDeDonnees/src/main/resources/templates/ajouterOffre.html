@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ajouter une Offre</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Ajouter une Offre</h1>
+<form action="/offres/ajouter" method="post">
+    <label for="hotel">Nom de l'Hôtel :</label>
+    <select name="hotel" id="hotel" required>
+        <option th:each="hotel : ${hotels}" 
+                th:value="${hotel.id}" 
+                th:text="${hotel.nom}"></option>
+    </select>
+
+    <label for="agence">Nom de l'Agence :</label>
+    <select name="agence" id="agence" required>
+        <option th:each="agence : ${agences}" 
+                th:value="${agence.id}" 
+                th:text="${agence.nom}"></option>
+    </select>
+
+    <label for="prix">Prix Proposé :</label>
+    <input type="number" name="prix" id="prix" required>
+
+    <button type="submit">Ajouter l'Offre</button>
+</form>
+
+<a href="/offres">Retour à la liste des offres</a>
+</body>
+</html>

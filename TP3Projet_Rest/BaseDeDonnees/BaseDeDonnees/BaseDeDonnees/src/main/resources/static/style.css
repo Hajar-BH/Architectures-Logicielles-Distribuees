@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button.btn-vert {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.btn-vert:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+.ajouter-btn {
+    text-align: center; /* Centre horizontalement le bouton */
+    margin-top: 20px; /* Ajoute un espace au-dessus */
+}
+
+.ajouter-btn a {
+    background-color: #4CAF50; /* Vert clair */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Ajoute de l'espace autour du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    display: inline-block; /* Pour donner l'apparence d'un bouton */
+    text-align: center;
+    font-size: 14px; /* Taille de police */
+}
+
+.ajouter-btn a:hover {
+    background-color: #45a049; /* Vert plus foncé au survol */
+}
+
+
+
+/* Style pour la page Ajouter une Offre */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #4CAF50;
+    font-size: 28px;
+}
+
+form {
+    background: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style pour le lien de retour */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

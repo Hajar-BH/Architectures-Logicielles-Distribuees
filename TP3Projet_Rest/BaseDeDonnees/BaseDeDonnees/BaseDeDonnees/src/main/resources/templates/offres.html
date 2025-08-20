@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Offres</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Liste des Offres</h1>
+    <form action="/offres" method="get">
+        <input type="text" name="ville" placeholder="Ville">
+        <input type="number" name="prix" placeholder="Prix Maximum">
+        <button type="submit" class="btn-vert">Rechercher</button>
+    </form>
+    <table>
+        <tr>
+            <th>Nom de l'Hôtel</th>
+            <th>Agence</th>
+            <th>Prix Proposé</th>
+        </tr>
+        <tr th:each="offre : ${offres}">
+            <td th:text="${offre.hotel.nom}">Nom de l'Hôtel</td>
+            <td th:text="${offre.agence.nom}">Agence</td>
+            <td th:text="${offre.prixPropose}">Prix Proposé</td>
+        </tr>
+    </table>
+    <div class="ajouter-btn">
+        <a href="/offres/ajouter">Ajouter une Offre</a>
+    </div>
+</body>
+</html>

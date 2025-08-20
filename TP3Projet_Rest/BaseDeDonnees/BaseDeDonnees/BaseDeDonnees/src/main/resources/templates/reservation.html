@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <title>Réservations</title>
+</head>
+<body>
+    <h1>Liste des Réservations</h1>
+    <table>
+        <tr>
+            <th>Client</th>
+            <th>Offre</th>
+            <th>Hôtel</th>
+            <th>Agence</th>
+            <th>Prix Proposé</th>
+        </tr>
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${reservation.client}"></td>
+            <td th:text="${reservation.offre.id}"></td>
+            <td th:text="${reservation.offre.hotel.nom}"></td>
+            <td th:text="${reservation.offre.agence.nom}"></td>
+            <td th:text="${reservation.offre.prixPropose}"></td>
+        </tr>
+    </table>
+</body>
+</html>
