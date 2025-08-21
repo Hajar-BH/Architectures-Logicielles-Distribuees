@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <xs:complexType name="Chambre">
+        <xs:sequence>
+            <xs:element name="typeChambre" type="xs:string"/>
+            <xs:element name="numero" type="xs:int"/>
+            <xs:element name="prix" type="xs:double"/>
+            <xs:element name="capacite" type="xs:int"/>
+            <xs:element name="disponible" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Hotel">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="adresse" type="xs:string"/>
+            <xs:element name="etoiles" type="xs:int"/>
+            <xs:element name="chambres" type="Chambre" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Reservation">
+        <xs:sequence>
+            <xs:element name="idReservation" type="xs:int"/>
+            <xs:element name="nomClient" type="xs:string"/>
+            <xs:element name="prenomClient" type="xs:string"/>
+            <xs:element name="numCin" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="telephone" type="xs:string"/>
+            <xs:element name="dateDebut" type="xs:date"/>
+            <xs:element name="dateFin" type="xs:date"/>
+            <xs:element name="status" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ConsulterDisponibilitesRequest">
+        <xs:sequence>
+            <xs:element name="loginAgence" type="xs:string"/>
+            <xs:element name="passwordAgence" type="xs:string"/>
+            <xs:element name="dateDebut" type="xs:date"/>
+            <xs:element name="dateFin" type="xs:date"/>
+            <xs:element name="nbPersonnes" type="xs:int"/>
+            <xs:element name="prixMax" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ConsulterDisponibilitesResponse">
+        <xs:sequence>
+            <xs:element name="chambresDisponibles" type="Chambre" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ReserverChambreRequest">
+        <xs:sequence>
+            <xs:element name="loginAgence" type="xs:string"/>
+            <xs:element name="passwordAgence" type="xs:string"/>
+            <xs:element name="idChambre" type="xs:int"/>
+            <xs:element name="nomClient" type="xs:string"/>
+            <xs:element name="prenomClient" type="xs:string"/>
+            <xs:element name="numCin" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="telephone" type="xs:string"/>
+            <xs:element name="dateDebut" type="xs:date"/>
+            <xs:element name="dateFin" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ReserverChambreResponse">
+        <xs:sequence>
+            <xs:element name="confirmation" type="xs:boolean"/>
+            <xs:element name="referenceReservation" type="xs:string" minOccurs="0"/>
+            <xs:element name="message" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
